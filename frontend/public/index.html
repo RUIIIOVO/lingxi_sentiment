@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="" class="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <!-- <title><%= htmlWebpackPlugin.options.title %></title> -->
+  <title>灵犀舆情</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      /* background-color: #0B0B0C; */
+      background-color: #171717;
+      font-family: Inter, 'Helvetica Neue', Helvetica, 'PingFang SC',
+  'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+    }
+
+    ul,
+    li {
+      list-style: none;
+    }
+
+    /* 省略号 */
+    .ellipsis {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    #app {
+      width: 100%;
+      height: 100%;
+    }
+    /* 去除百度地图logo */
+    .anchorBL{
+      right: 0 !important;
+    }
+    .anchorBL span,a{
+      /* display:none */
+      background-color:transparent !important;
+      color: rgba(255, 255, 255, 0.9) !important;
+      text-decoration: none !important;
+      
+    }
+    .anchorBL img{
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- 引入了百度的地图API脚本，用于在网页上显示地图。 -->
+  <script type="text/javascript" src="//api.map.baidu.com/api?v=3.0&ak=Qu81FICap48htdeR56t5PlOltEVfRmzE"></script>
+  <script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"
+></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+{
+  "name": "shows",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@antv/g2": "^5.1.2",
+    "@element-plus/icons-vue": "^2.1.0",
+    "autofit.js": "^3.0.7",
+    "axios": "^1.5.0",
+    "bmap": "^1.0.1",
+    "core-js": "^3.8.3",
+    "echarts": "^5.4.3",
+    "element-plus": "^2.3.8",
+    "js-cookie": "^3.0.5",
+    "tdesign-vue-next": "^1.8.1",
+    "vue": "^3.2.13",
+    "vue-router": "^4.2.4",
+    "vue3-baidu-map-gl": "^2.3.2",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@arco-design/web-vue": "^2.52.0",
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "unplugin-auto-import": "^0.16.6"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}

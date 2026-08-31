@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Django
+db.sqlite3
+*.log
+
+# 环境变量（含数据库口令与爬虫 Cookie）
+.env
+.env.local
+.env.*.local
+
+# 前端
+node_modules/
+dist/
+
+# 构建产物与数据集
+*.zip
+model/data/
+
+# 编辑器
+.idea/
+.vscode/
+*.iml
+
+# macOS
+.DS_Store
