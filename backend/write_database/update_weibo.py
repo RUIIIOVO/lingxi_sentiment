@@ -10,7 +10,7 @@ from lxml import etree
 import re
 import json
 from datetime import datetime
-from hot_search.reptile.common.requests_get import requests_get
+from reptile.common.requests_get import requests_get
 
 # https://weibo.cn/
 headers = {

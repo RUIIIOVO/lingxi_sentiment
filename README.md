@@ -12,7 +12,7 @@ backend/    Django 后端：接口、爬虫、词云、入库任务
   home/           首页数据接口
   database/       舆情数据检索接口
   monitor/        实时监测与预警接口
-  hot_search/     热搜聚合（含 reptile 爬虫与 emotion 情感模块）
+  hot_search/     热搜聚合接口（emotion 为未启用的实验模块）
   user/           登录注册
   word_cloud/     词云生成
   reptile/        各平台热搜爬虫（微博、知乎、百度、B站、抖音、头条、微信）
@@ -74,6 +74,9 @@ Cookie 由 `reptile/common/cookie_manager.py` 统一从环境变量读取。必�
 官方游客身份（微博 passport 的 genvisitor、百度的 BAIDUID）实测对以上接口都不起作用，
 因此未引入自动申请机制。
 
+各平台 Cookie 有效期短。抓取失败先看日志里有没有 `AuthRequired`：有就是 Cookie 过期或缺失，
+重新抓一份填回 `.env` 即可；报 `FetchError` 则是网络或站点改版。
+
 ## 本地启动
 
 ```bash
@@ -101,12 +104,6 @@ cd model
 python model.py      # 训练
 python deploy.py     # 起 Flask 推理服务（0.0.0.0:8080）
 ```
-
-## 已知问题
-
-- `backend/reptile/` 与 `backend/hot_search/reptile/` 是两份重复的爬虫代码，尚未合并。
-- `backend/user/views.py` 用字符串拼接 SQL，且用户密码明文存库，勿直接用于生产。
-- 各平台 Cookie 有效期短，抓取失败时先检查 Cookie 是否过期。
 
 ## 许可证
 

@@ -3,7 +3,6 @@ import pymysql
 import json
 import datetime
 from django.http import HttpResponse, JsonResponse
-from hot_search.reptile.main.main_hot_search import rep_get_hot_search
 
 from db_config import db
 
